@@ -11,6 +11,10 @@ h6 {
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  padding: 80px 0 0;
+  font-family: "Philosopher", sans-serif;
+}
 
 a {
   text-decoration: none;
@@ -22,11 +26,18 @@ li {
 .center {
   max-width: 1440px;
   width: 100%;
+  margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
 }
 
 .page-header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  opacity: 0.9;
+  box-shadow: 0 8px 30px black;
   background-color: rgb(223 223 223);
   padding: 20px 0;
 }
@@ -58,9 +69,77 @@ li {
 }
 .page-header__item-link {
   color: black;
+  font-weight: 400;
   background-image: linear-gradient(90deg, #1246e2, #034b81, #8c59d9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 18px;
   line-height: 21px;
+}
+.promo {
+  padding: 50px 0;
+  min-height: 500px;
+  background-image: url(../img/background-top-promo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.promo__wrp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+}
+.promo__image {
+  background: url(../img/фото.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+.promo__discription {
+  max-width: 530px;
+  width: 100%;
+}
+.promo__name {
+  margin: 0 0 25px;
+  display: block;
+  text-align: center;
+  position: relative;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33px;
+}
+.promo__name::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #1246e2, #034b81, #8c59d9);
+}
+
+.promo__title {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 52px;
+}
+.promo__discription-text {
+  margin: 0 0 50px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.promo__link {
+  padding: 10px;
+  border: 1px solid black;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: block;
+  text-align: center;
 }
