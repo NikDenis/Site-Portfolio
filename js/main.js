@@ -63,3 +63,15 @@ sliderDots.forEach((dot, index) => {
     thisSlide(sliderCount);
   });
 });
+
+const pageHeader = document.querySelector(".page-header");
+
+window.addEventListener("scroll", function () {
+  const scrollPos = window.scrollY;
+  console.log(scrollPos);
+  if (scrollPos > 100) {
+    pageHeader.classList.add("page-header_scroll");
+  } else {
+    pageHeader.classList.remove("page-header_scroll");
+  }
+});

@@ -12,10 +12,12 @@ h6 {
   box-sizing: border-box;
 }
 body {
-  padding: 56px 0 0;
+  padding: 76px 0 0;
   font-family: "Philosopher", sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
 }
@@ -42,12 +44,17 @@ li {
 .page-header {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
-  opacity: 0.9;
+  background-color: rgba(223, 223, 223, 0.8);
+  padding: 18px 0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.page-header_scroll {
   box-shadow: 0 8px 30px black;
-  background-color: rgb(223 223 223);
-  padding: 8px 0;
+  padding: 5px 0;
 }
 .page-header__wrp {
   display: flex;
@@ -84,7 +91,6 @@ li {
   -webkit-text-fill-color: transparent;
   font-size: 18px;
   line-height: 21px;
-  scroll-behavior: smooth;
 }
 .promo {
   padding: 50px 0;
@@ -157,6 +163,11 @@ li {
   padding: 50px 0;
   background-color: #f1f1f1;
 }
+.certificates__title,
+.projects__title {
+  color: black;
+  text-shadow: 0px 0px 10px #034b81;
+}
 .certificates__image-wrapper {
   display: flex;
   flex-direction: row;
@@ -173,7 +184,10 @@ li {
   background-position: center;
   background-size: cover;
 }
-
+.skills__title {
+  text-shadow: 2px 4px 2px black;
+  color: #fff;
+}
 .skills__list {
   display: flex;
   flex-direction: row;
@@ -209,8 +223,25 @@ li {
   fill: #bc6100;
 }
 .projects {
-  padding: 50px 0;
+  padding: 50px 0 70px;
   background: #f1f1f1;
+}
+.slider__link-wrp {
+}
+.slider__link-wrp > div {
+  padding: 0 15px;
+  margin: 0 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider__subtitle {
+  text-align: center;
+  margin: 0 0 5px;
+}
+.slider__link-site {
+}
+.slider__link-code {
 }
 /* slider */
 .slider {
@@ -223,10 +254,12 @@ li {
 .slider-line {
   background-color: #f1f1f1;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   transition: all 3s ease;
 }
+
 .slider-image {
+  height: 92%;
   width: 100%;
 }
 .slider-prev,
@@ -295,6 +328,6 @@ li {
     height: calc(10px + (16 - 10) * ((100vw - 320px) / (850 - 320)));
   }
   .slider-wrapper {
-    column-gap: calc(15px + (10 - 15) * ((100vw - 320px) / (850 - 320)));
+    column-gap: calc(5px + (10 - 5) * ((100vw - 320px) / (850 - 320)));
   }
 }
