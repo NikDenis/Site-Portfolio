@@ -34,7 +34,8 @@ li {
 }
 .skills__title,
 .certificates__title,
-.projects__title {
+.projects__title,
+.page-footer__title {
   margin: 0 0 70px;
   font-size: 36px;
   line-height: 39px;
@@ -125,7 +126,7 @@ li {
   text-align: center;
   position: relative;
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 33px;
 }
 .promo__name::after {
@@ -139,12 +140,14 @@ li {
 }
 
 .promo__title {
+  color: #232323;
   margin: 0 0 20px;
   font-weight: 700;
   font-size: 45px;
   line-height: 52px;
 }
 .promo__discription-text {
+  color: #424242;
   margin: 0 0 50px;
   font-weight: 400;
   font-size: 20px;
@@ -153,11 +156,14 @@ li {
 .promo__link {
   padding: 10px;
   border: 1px solid black;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 20px;
   line-height: 23px;
   display: block;
   text-align: center;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(to right, #1246e2, #034b81, #8c59d9);
 }
 .certificates {
   padding: 50px 0;
@@ -169,11 +175,12 @@ li {
   text-shadow: 0px 0px 10px #034b81;
 }
 .certificates__image-wrapper {
+  overflow-x: scroll;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 30px;
 }
 .certificates__image {
   display: block;
@@ -236,15 +243,37 @@ li {
   align-items: center;
 }
 .slider__subtitle {
-  text-align: center;
-  margin: 0 0 5px;
+  max-width: 200px;
+  width: 100%;
+  background-image: linear-gradient(90deg, #1246e2, #034b81, #8c59d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px 0 0 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  margin: 0 auto 5px;
 }
-.slider__link-site {
+.slider__link-site,
+.slider__link-code {
+  color: black;
+  background-image: linear-gradient(90deg, #1246e2, #8c59d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: underline;
 }
 .slider__link-code {
+  background-image: linear-gradient(90deg, #8c59d9, #1246e2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /* slider */
 .slider {
+  box-shadow: 0px 0px 20px grey;
+  border-radius: 20px;
   position: relative;
   max-width: 1200px;
   overflow: hidden;
@@ -330,4 +359,46 @@ li {
   .slider-wrapper {
     column-gap: calc(5px + (10 - 5) * ((100vw - 320px) / (850 - 320)));
   }
+}
+
+.page-footer {
+  padding: 30px 0;
+  background-color: rgba(223, 223, 223, 0.8);
+}
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-footer__icon-logo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.page-footer__icon-wrp {
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-footer__link-icon {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+.page-footer__image-icon {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+.page-footer__title {
+  margin: 0 0 50px;
+  background-image: linear-gradient(90deg, #1246e2, #034b81, #8c59d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
