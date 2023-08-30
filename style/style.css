@@ -1,3 +1,4 @@
+@import url(mobile-menu.css);
 @import url(hover-animation.css);
 
 *,
@@ -79,6 +80,7 @@ img {
 }
 .page-header__nav {
 }
+
 .page-header__nav-list {
   display: flex;
   flex-direction: row;
@@ -86,6 +88,9 @@ img {
   align-items: center;
   min-width: 350px;
   max-width: 500px;
+}
+.mobile-menu {
+  display: none;
 }
 .page-header__nav-item {
 }
@@ -436,6 +441,53 @@ img {
     width: 400px;
   }
 }
+
+@media (max-width: 520px) {
+  .page-header__nav-list {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .promo__name {
+    font-size: 26px;
+    line-height: 29px;
+  }
+  .promo__title {
+    font-size: 38px;
+    line-height: 41px;
+  }
+  .promo__discription-text {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+  .promo__link {
+    font-size: 19px;
+    line-height: 21px;
+  }
+  .skills__title,
+  .certificates__title,
+  .projects__title,
+  .page-footer__title {
+    font-size: 26px;
+    line-height: 29px;
+  }
+  .skills__name {
+    font-size: 19px;
+    line-height: 21px;
+  }
+  .slider__subtitle {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .slider__link-code,
+  .slider__link-site {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
 @media (max-width: 450px) {
   .certificates__image-wrapper {
     gap: 25px;
