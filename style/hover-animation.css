@@ -16,6 +16,10 @@
   .promo__discription-text > a:hover {
     text-decoration: none;
   }
+  .slider__link-code:hover,
+  .slider__link-site:hover {
+    text-decoration: underline;
+  }
   .page-footer__link-icon:hover {
     animation: none;
     transform: scale(1.2);
