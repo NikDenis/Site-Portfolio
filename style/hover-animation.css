@@ -1,4 +1,5 @@
 @media (hover: hover) {
+
   a,
   button,
   .slider-dot:hover {
@@ -9,41 +10,51 @@
   .promo__link:hover {
     text-shadow: 0 0 15px #8c59d9;
   }
+
   .page-header__item-link:active {
     text-shadow: 0 0 15px black;
     opacity: 0.5;
   }
-  .promo__discription-text > a:hover {
+
+  .promo__discription-text>a:hover {
     text-decoration: none;
   }
+
   .slider__link-code:hover,
   .slider__link-site:hover {
     text-decoration: underline;
   }
+
   .slider-next:hover {
     transform: scale(1.1);
   }
+
   .slider-prev:hover {
     transform: rotate(180deg) scale(1.1);
   }
+
   .slider-dot:hover {
     transform: scale(1.3);
   }
+
   .page-footer__link-icon:hover {
     animation: none;
     transform: scale(1.2);
     box-shadow: 0 0 15px #8c59d9;
     border-radius: 10px;
   }
+
   .page-footer__link-icon:active {
     transform: scale(1.1);
     opacity: 0.5;
   }
+
   .accordion__item:hover {
     box-shadow: 0 0 15px black;
     transform: scale(1.005);
   }
-  .accordion__body > a:hover {
+
+  .accordion__body>a:hover {
     transform: scale(1.015);
     text-shadow: 0 0 15px rgb(75, 74, 74);
   }
@@ -53,6 +64,7 @@
   0% {
     transform: scale(0.8);
   }
+
   50% {
     transform: scale(1.3);
   }
@@ -61,6 +73,7 @@
     transform: scale(0.8);
   }
 }
+
 @keyframes rotateIcon {
   0% {
     transform: rotate(0deg);
@@ -69,10 +82,38 @@
   50% {
     transform: scale(1.5);
   }
+
   75% {
     transform: rotate(180deg);
   }
+
   100% {
-    transform:  rotate(180deg) scale(1);
+    transform: rotate(180deg) scale(1);
+  }
+}
+
+@keyframes backgroundButton {
+  0% {
+    border-image-source: linear-gradient(to right, #8c59d9, #1246e2, #034b81);
+  }
+
+  25% {
+    border-image-source: linear-gradient(to right, #8c59d9, #1246e2, #034b81);
+  }
+
+  40% {
+    border-image-source: linear-gradient(to right, #034b81, #8c59d9, #1246e2);
+  }
+
+  60% {
+    border-image-source: linear-gradient(to right, #034b81, #8c59d9, #1246e2);
+  }
+
+  75% {
+    border-image-source: linear-gradient(to right, #1246e2, #034b81, #8c59d9);
+  }
+
+  100% {
+    border-image-source: linear-gradient(to right, #1246e2, #034b81, #8c59d9);
   }
 }
