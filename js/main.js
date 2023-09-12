@@ -3,6 +3,9 @@ const sliderLine = document.querySelector(".slider-line");
 const sliderDots = document.querySelectorAll(".slider-dot");
 const sliderPrev = document.querySelector(".slider-prev");
 const sliderNext = document.querySelector(".slider-next");
+const pageHeader = document.querySelector(".page-header");
+const mobileLinkMenu = document.querySelectorAll(".mobile-menu__link");
+const mobileMenu = document.getElementById("menu-switch");
 
 let sliderCount = 0;
 let sliderWidth;
@@ -64,7 +67,6 @@ sliderDots.forEach((dot, index) => {
   });
 });
 
-const pageHeader = document.querySelector(".page-header");
 
 window.addEventListener("scroll", function () {
   const scrollPos = window.scrollY;
@@ -75,3 +77,12 @@ window.addEventListener("scroll", function () {
     pageHeader.classList.remove("page-header_scroll");
   }
 });
+
+function closeMenu (links) {
+  links.forEach((el) => {
+    el.addEventListener('click', () => {
+      mobileMenu.checked = false;
+    });
+  });
+}
+closeMenu(mobileLinkMenu);
