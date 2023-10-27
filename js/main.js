@@ -25,6 +25,11 @@ function showSlide() {
 }
 showSlide();
 
+function sliderCountPlus() {
+  nextSlide();
+}
+setInterval(sliderCountPlus, 15000);
+
 // Листает слайды назад при клике на кнопку
 function prevSlide() {
   sliderCount--;
@@ -67,7 +72,6 @@ sliderDots.forEach((dot, index) => {
   });
 });
 
-
 window.addEventListener("scroll", function () {
   const scrollPos = window.scrollY;
   console.log(scrollPos);
@@ -78,9 +82,9 @@ window.addEventListener("scroll", function () {
   }
 });
 
-function closeMenu (links) {
+function closeMenu(links) {
   links.forEach((el) => {
-    el.addEventListener('click', () => {
+    el.addEventListener("click", () => {
       mobileMenu.checked = false;
     });
   });
