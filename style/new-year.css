@@ -1,0 +1,124 @@
+.page-logo, .page-header__item-link, .promo__link, .promo__discription-text a {
+  position: relative;
+}
+
+.promo__link, .promo__discription-text a {
+  z-index: 100;
+}
+
+.page-logo::after, .page-footer__link-icon::after, .page-header__item-link::after, .page-header::before {
+  content: "";
+  position: absolute;
+}
+
+.page-logo::after {
+  height: 20px;
+  width: 20px;
+  top: 3px;
+  right: 97px;
+  background: url(../img/new-year/pngwing.com.png) no-repeat center / cover;
+  transform: rotate(5deg);
+
+}
+
+.page-footer__link-icon::after {
+  height: 25px;
+  width: 25px;
+  top: -4px;
+  right: -1px;
+  background: url(../img/new-year/pngwing.com.png) no-repeat center / cover;
+  transform: rotate(5deg);
+}
+
+.page-header__item-link::after {
+  z-index: -1;
+  height: 36px;
+  width: 100%;
+  top: -7px;
+  right: 0;
+  background: url(../img/new-year/snow.png) no-repeat center / cover;
+}
+
+@media (max-width: 520px) {
+  .page-header::after {
+    z-index: -1;
+    content: "";
+    height: 70px;
+    width: 100px;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    background: url(../img/new-year/spruce.png) no-repeat center / cover;
+  }
+}
+
+.page-header::before {
+  z-index: -1;
+  height: 70px;
+  width: 100px;
+  top: -5px;
+  left: -7px;
+  background: url(../img/new-year/spruce2.png) no-repeat center / cover;
+}
+
+.girlianda {
+  display: block;
+  z-index: 1;
+  height: 30px;
+  width: 100%;
+  left: 0;
+  top: 67px;
+  position: absolute;
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: 40px;
+  background-image: url(../img/new-year/girlianda1.gif);
+}
+
+.snow-blocks {
+  position: fixed;
+}
+
+.snow1 {
+  background-image: url(../img/new-year/snow1.png);
+  position: absolute;
+  width: 100vw;
+  height: 600vh;
+  animation: snow1 18s linear infinite;
+}
+
+.snow2 {
+  background-image: url(../img/new-year/snow2.png), url(../img/new-year/snow3.png);
+  animation: snow2 10s linear infinite;
+  width: 100vw;
+  height: 600vh;
+  position: absolute;
+}
+
+@keyframes snow2 {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 10% 600px, 10% 600px;
+  }
+}
+
+@keyframes snow1 {
+  from {
+    background-position: 0 -300px;
+  }
+
+  20% {
+    background-position: 20% -100px;
+  }
+
+  40% {
+    background-position: 30% 100px;
+  }
+
+  to {
+    background-position: 20% 700px;
+  }
+}
