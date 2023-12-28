@@ -1,12 +1,17 @@
-.page-logo, .page-header__item-link, .promo__link, .promo__discription-text a {
+.page-logo, .page-header__item-link, .promo__link,
+.promo__discription-text a,
+.page-footer__title,
+.skills__name {
   position: relative;
 }
 
 .promo__link, .promo__discription-text a {
-  z-index: 100;
+  z-index: 10;
 }
 
-.page-logo::after, .page-footer__link-icon::after, .page-header__item-link::after, .page-header::before {
+.page-logo::after, .page-footer__link-icon::after,
+.page-header__item-link::after, .page-header::before,
+.page-footer__title::before, .skills__name::after {
   content: "";
   position: absolute;
 }
@@ -39,6 +44,7 @@
   background: url(../img/new-year/snow.png) no-repeat center / cover;
 }
 
+
 @media (max-width: 520px) {
   .page-header::after {
     z-index: -1;
@@ -59,6 +65,49 @@
   top: -5px;
   left: -7px;
   background: url(../img/new-year/spruce2.png) no-repeat center / cover;
+}
+
+.skills__name::after {
+  background-image: url(../img/new-year/snow5.png);
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: 100px;
+  top: 18px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+.page-footer__title::before {
+  background-image: url(../img/new-year/spruce3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 0;
+}
+
+.slider__link-wrp {
+  background-image: url(../img/new-year/spruce-border.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__link-site, .slider__link-code, .slider__subtitle {
+  text-shadow: 2px 4px 2px #649597;
+  color: #000000;
+}
+
+.accordion__item {
+  background: url(../img/new-year/spruce2.png);
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: top;
+  background-size: 85px;
 }
 
 .girlianda {
