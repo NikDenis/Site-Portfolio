@@ -8,6 +8,7 @@ const mobileLinkMenu = document.querySelectorAll(".mobile-menu__link");
 const mobileMenu = document.getElementById("menu-switch");
 
 let sliderCount = 0;
+const timer = 15000;
 let sliderWidth;
 
 // Чувствует каждое изменение экрана
@@ -25,10 +26,14 @@ function showSlide() {
 }
 showSlide();
 
+let interval = setInterval(sliderCountPlus, timer);
 function sliderCountPlus() {
   nextSlide();
 }
-setInterval(sliderCountPlus, 15000);
+function restartInterval() {
+  clearInterval(interval);
+  interval = setInterval(sliderCountPlus, timer);
+}
 
 // Листает слайды назад при клике на кнопку
 function prevSlide() {
@@ -39,6 +44,7 @@ function prevSlide() {
 
   rollSlider();
   thisSlide(sliderCount);
+  restartInterval();
 }
 
 // Листает слайды вперед при клике на кнопку
@@ -50,6 +56,7 @@ function nextSlide() {
 
   rollSlider();
   thisSlide(sliderCount);
+  restartInterval();
 }
 
 // Задает шаг перемещение слайдов
@@ -69,12 +76,13 @@ sliderDots.forEach((dot, index) => {
     sliderCount = index;
     rollSlider();
     thisSlide(sliderCount);
+    restartInterval();
   });
 });
 
 window.addEventListener("scroll", function () {
   const scrollPos = window.scrollY;
-  console.log(scrollPos);
+  // console.log(scrollPos);
   if (scrollPos > 100) {
     pageHeader.classList.add("page-header_scroll");
   } else {
@@ -90,3 +98,4 @@ function closeMenu(links) {
   });
 }
 closeMenu(mobileLinkMenu);
+
